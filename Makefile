@@ -6,7 +6,19 @@
 #    By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/23 15:10:41 by tpuma             #+#    #+#              #
-#    Updated: 2022/11/23 15:10:42 by tpuma            ###   ########.fr        #
+#    Updated: 2022/11/26 14:17:51 by tpuma            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME
+
+SRC
+
+INCLUDES
+
+all
+clean
+fclean 
+re fclean all
+
+.PHONY
