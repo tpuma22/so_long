@@ -6,19 +6,22 @@
 #    By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/23 15:10:41 by tpuma             #+#    #+#              #
-#    Updated: 2022/11/26 14:17:51 by tpuma            ###   ########.fr        #
+#    Updated: 2022/11/27 00:45:41 by tpuma            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME
+/*-----------VARIABLES----------*/
+NAME =
 
-SRC
+SRC =
 
-INCLUDES
+INCLUDES =
+/*-----------REGLASS----------*/
 
-all
-clean
-fclean 
-re fclean all
+/*-----------FUNCIONES----------*/
+all: 
+clean:
+fclean:
+re: fclean all
 
-.PHONY
+.PHONY: all clean fclean re
