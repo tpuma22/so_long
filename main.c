@@ -6,26 +6,35 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 11:24:10 by tpuma             #+#    #+#             */
-/*   Updated: 2022/12/01 18:12:06 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/12/03 17:48:52 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include<unistd.h>
-#include<ctype.h>
-#include<stdlib.h>
-#include<string.h>
-#include<stddef.h>
-#include "mlx/mlx.h"
+#include "so_long.h"
+
+int	key_hook(int keycode, t_game *game)
+{
+/* 	(void)game; */
+	if (keycode == 53)
+	{
+		printf("key_hook:%d\n", keycode);
+		mlx_destroy_window(game->mlx, game->new_win);
+		mlx_destroy(game->mlx);
+		game->mlx = NULL;
+		exit(0);
+	}
+	return (0);
+}
 
 int	main(void)
 {
-	void	*mlx;
-	void	*reference;
-
-	mlx = mlx_init();
-	reference = mlx_new_window(mlx, \
+	t_game	game;
+	/*--------FUNCIÓN-ABRIR VENTANA---------- */
+	game.mlx = mlx_init();
+	game.new_win = mlx_new_window(game.mlx, \
 		1000, 600, "so_long");
-	mlx_loop(mlx);
+	/*--------FUNCIÓN-PASAR KEYCODE---------- */
+	mlx_key_hook(game.new_win, key_hook, &game);
+	mlx_loop(game.mlx);
+	return (0);
 }

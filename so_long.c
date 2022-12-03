@@ -6,13 +6,13 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 17:42:37 by tpuma             #+#    #+#             */
-/*   Updated: 2022/12/01 19:11:13 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/12/03 14:48:25 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	main(int argc, char *argv[])
+/* int	main(int argc, char *argv[])
 {
 	if (argc == 2)
 		ft_game(argv[1]);
@@ -23,4 +23,4 @@ int	main(int argc, char *argv[])
 	}
 	exit(0);
 	return (0);
-}
+} */
