@@ -6,7 +6,7 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 17:42:37 by tpuma             #+#    #+#             */
-/*   Updated: 2022/12/03 14:48:25 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/12/11 18:13:50 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,30 @@
 	exit(0);
 	return (0);
 } */
+
+int	key_hook(int keycode, t_game *game)
+{
+/* 	(void)game; */
+	if (keycode == 53)
+	{
+		printf("key_hook:%d\n", keycode);
+		mlx_destroy_window(game->mlx, game->new_win);
+		mlx_destroy(game->mlx);
+		game->mlx = NULL;
+		exit(0);
+	}
+	return (0);
+}
+
+int	main(void)
+{
+	t_game	game;
+	/*--------FUNCIÓN-ABRIR VENTANA---------- */
+	game.mlx = mlx_init();
+	game.new_win = mlx_new_window(game.mlx, \
+		1000, 600, "so_long");
+	/*--------FUNCIÓN-PASAR KEYCODE---------- */
+	mlx_key_hook(game.new_win, key_hook, &game);
+	mlx_loop(game.mlx);
+	return (0);
+}

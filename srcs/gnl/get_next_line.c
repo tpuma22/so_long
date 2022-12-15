@@ -6,7 +6,7 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 15:03:44 by tpuma             #+#    #+#             */
-/*   Updated: 2022/10/23 10:20:05 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/10/23 14:10:41 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,11 @@ char	*ft_get_line(char *str)
 		line[i] = str[i];
 		i++;
 	}
-	if (str[i] == '\n')
+/* 	if (str[i] == '\n')
 	{
 		line[i] = str[i];
 		i++;
-	}
+	} */
 	line[i] = '\0';
 	return (line);
 }
@@ -104,3 +104,32 @@ char	*get_next_line(int fd)
 	str = ft_save_line(str);
 	return (line);
 }
+
+/* int	main(void)
+{
+	char	*line;
+	int		fd;
+	int		i;
+
+	fd = open("Neruda.txt", O_RDONLY);
+	i = 0;
+	line = 0;
+	line = get_next_line(fd);
+	printf("%s", line);
+	line = get_next_line(fd);
+	printf("%s", line);
+	line = get_next_line(fd);
+	printf("%s", line);
+	line = get_next_line(fd);
+	printf("%s", line);
+ 	while (line != NULL)
+	{
+		printf("%s", line);
+		free(line);
+		line = get_next_line(fd);
+		i++;
+	}
+	//system("leaks a.out");
+	return (0);
+}
+ */

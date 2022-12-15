@@ -6,7 +6,7 @@
 #    By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/03 14:12:19 by tpuma             #+#    #+#              #
-#    Updated: 2022/12/03 16:05:15 by tpuma            ###   ########.fr        #
+#    Updated: 2022/12/11 18:26:27 by tpuma            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,11 @@
 
 NAME = so_long
 SRC_DIR = srcs
-CSRC =	main.c		\
-		so_long.c	\
+CSRC =	main.c								\
+		so_long.c							\
+		srcs/gnl/get_next_line_utils.c		\
+		srcs/gnl/get_next_line.c			\
+		srcs/gnl/get_next_line.h			\
 
 INCLUDES = so_long.h
 

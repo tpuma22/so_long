@@ -6,7 +6,7 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 15:46:35 by tpuma             #+#    #+#             */
-/*   Updated: 2022/10/23 10:19:09 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/10/23 14:24:17 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,3 +103,53 @@ char	*get_next_line(int fd)
 	str[fd] = ft_save_line(str[fd]);
 	return (line);
 }
+
+/* int	main(void)
+{
+	char	*line;
+	char	*line2;
+	char	*line3;
+	int		fd;
+	int		fd2;
+	int		fd3;
+	int		i;
+
+	fd = open("Benedetti.txt", O_RDONLY);
+	fd2 = open("Neruda.txt", O_RDONLY);
+	fd3 = open("Borges.txt", O_RDONLY);
+	i = 0;
+	line = 0;
+	line2 = 0;
+	line3 = 0;
+	line = get_next_line(fd);
+	while (line != NULL)
+	{
+		printf("%s", line);
+		free(line);
+		line = get_next_line(fd);
+		i++;
+	}
+	// printf("%s", line);
+	i = 0;
+	line2 = get_next_line(fd2);
+	while (line2 != NULL)
+	{
+		printf("%s", line2);
+		free(line2);
+		line2 = get_next_line(fd2);
+		i++;
+	}
+	// printf("%s", line2);
+	i = 0;
+	line3 = get_next_line(fd3);
+	while (line3 != NULL)
+	{
+		printf("%s", line3);
+		free(line3);
+		line3 = get_next_line(fd3);
+		i++;
+	}
+	//printf("%s", line3);
+	return (0);
+}
+ */
