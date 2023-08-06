@@ -48,6 +48,8 @@
 
 
 void	*mlx_init();
+void  mlx_destroy(void *mlx_ptr);
+
 /*
 **  needed before everything else.
 **  return (void *)0 if failed
