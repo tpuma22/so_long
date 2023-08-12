@@ -46,6 +46,16 @@ int	main(void)
 	game.mlx = mlx_init();
 	game.new_win = mlx_new_window(game.mlx, \
 		1000, 600, "so_long");
+	/*--------FUNCIÓN ABRIR MAPA DE TAMAÑO = A VENTANA---------- */	  
+	//falta crear la función ft_get_map/ft_check_map/ft_check_char_map
+
+
+	// game.new_win = mlx_new_window(game.mlx, \
+	// 	game.map->height * 64, game.map->width * 64, "so_long");
+	// game.window.size.x = game.map->width * 64;
+	// game.window.size.y = game.map->height * 64;
+
+	
 	/*--------FUNCIÓN-PASAR KEYCODE---------- */
 	mlx_key_hook(game.new_win, key_hook, &game);
 	mlx_loop(game.mlx);

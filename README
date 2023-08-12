@@ -1,0 +1,9 @@
+>>> so_long <<<
+
+COMPILE
+
+make
+
+make fclean
+
+To open the window---> ./so_long

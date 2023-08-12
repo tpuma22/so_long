@@ -23,6 +23,11 @@
 # include <string.h>
 # include <stddef.h>
 
+// ========== structures ==========
+
+
+
+
 typedef struct s_map
 {
 	char	**ber;
@@ -36,16 +41,20 @@ typedef struct s_position
 	int			y;
 }t_position;
 
-typedef struct s_open_window
+typedef struct s_window
 {
 	void		*ref;
 	t_position	size;
-}t_open_window;
+}t_window;
 
 typedef struct s_game
 {
-	void	*mlx;
-	void	*new_win;
+	void		*mlx;
+	void		*new_win;
+	t_map		*map;
+	t_window	window;
+	t_position	sprite_position;
 }t_game;
+
 
 #endif
