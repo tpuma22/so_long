@@ -6,4 +6,43 @@ make
 
 make fclean
 
-To open the window---> ./so_long
+To open the window = ./so_long
+
+<<<Estructuras>>> 
+Source: https://www.youtube.com/watch?v=SUQqxIQ2psQ&ab_channel=makigas%3Aaprendeaprogramar
+Nos permiten organizar la información y agruparla 
+
+Sintaxis:
+struct s_xxx 
+{
+    char    a;
+    int     b;
+    void    *str;
+}t_xxx;
+
+Siempre deben terminar en ";" 
+
+Para declarar una estructura:
+/* int imprimir_datos(struct s_xxx cadena)
+{
+    printf("El valor de a es: %d \n El valor de b es: %d\n El string dice: %s", cadena.a, cadena.b, cadena.str);
+} */
+/* Si la estructura es compleja irá muy lento porque la estructura se copiaría tantas veces como sea utilizada en cada declaración o llamado, 
+para resolver esto se utilizan punteros. El "*" apunta a la dirección de la estructura y con "->" accedo al valor de sus campos. 
+Se agrega "&" al convocar la función. Esto nos obliga a que reemplacemos el "." por un "->" */
+int imprimir_datos(struct s_xxx *cadena)
+{
+    printf("El valor de a es: %d \n El valor de b es: %d\n El string dice: %s", cadena->a, cadena->b, cadena->str);
+}
+
+int main ()
+{
+    struct s_xxx    letra; /* variable de tipo estructura cuyo identificador es "letra"
+    Si quero acceder a uno de sus campos o manipularlo-->Identificador + . nombre del campo */
+    letra.a = 1;
+    letra.b = 125;
+    letra.str = "Hola mundo";
+    imprimir_datos(&letra);
+    return(0);
+}
+

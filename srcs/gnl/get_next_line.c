@@ -15,7 +15,7 @@
 char	*ft_read(int fd, char *str)
 {
 	ssize_t	rd;
-	char	*tmp;
+	char		*tmp;
 
 	tmp = malloc(sizeof (char) * (BUFFER_SIZE + 1));
 	if (!tmp)
@@ -105,6 +105,37 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
+/* -------------------------------PRUEBAS---------------------------- */
+/* 
+char	*get_next_line(int fd)
+{
+	int		i;
+	int		bytes_rd;
+	char	string;
+	char	*file;
+	size_t	BUFFER_SIZE;
+
+	bytes_rd = 0;
+	i = 0;
+	BUFFER_SIZE = 10000;
+	file = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return (NULL);
+	while ((bytes_rd = read(fd, &string, 1)) > 0)
+	{
+		file[i++] = string;
+		if (string == '\n')
+			break ;
+	}
+	if (((!file[i - 1]) && (!bytes_rd)) || bytes_rd == -1)
+	{
+		free(file);
+		return (NULL);
+	}
+	file[i] = '\0';
+	return (file);
+} */
+
 /* int	main(void)
 {
 	char	*line;
@@ -131,5 +162,5 @@ char	*get_next_line(int fd)
 	}
 	//system("leaks a.out");
 	return (0);
-}
- */
+} */
+

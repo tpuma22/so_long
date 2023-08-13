@@ -42,7 +42,7 @@ char	*ft_strchr(char *str, int c)
 	return (NULL);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+/* char	*ft_strjoin(char *s1, char *s2)
 {
 	unsigned int		i;
 	int					j;
@@ -69,3 +69,4 @@ char	*ft_strjoin(char *s1, char *s2)
 	free(s1);
 	return (s3);
 }
+ */

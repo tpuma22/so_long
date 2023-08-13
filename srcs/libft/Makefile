@@ -11,6 +11,12 @@
 # **************************************************************************** #
 
 NAME = libft.a
+# Colours code
+CYAN = "\\x1b[36m"
+MAGENTA = "\\x1b[35m"
+YELLOW = "\\x1b[33m"
+GREEN = "\\x1b[32m"
+RESET = "\\x1b[37m"
 
 SRC =	ft_isalpha.c		\
 		ft_isdigit.c		\
@@ -28,7 +34,7 @@ SRC =	ft_isalpha.c		\
 		ft_toupper.c		\
 		ft_tolower.c		\
 		ft_atoi.c			\
-		ft_strchr.c			\
+		ft_strchr_1.c			\
 		ft_strrchr.c		\
 		ft_strncmp.c		\
 		ft_strnstr.c		\
@@ -36,7 +42,7 @@ SRC =	ft_isalpha.c		\
 		ft_strdup.c			\
 		ft_calloc.c			\
 		ft_substr.c			\
-		ft_strjoin.c		\
+		ft_strjoin_2.c		\
 		ft_strtrim.c		\
 		ft_split.c			\
 		ft_itoa.c			\
@@ -80,10 +86,12 @@ bonus: $(OBJ) $(OBJ_BONUS) $(INCLUDES)
 	$(AR) $(NAME) $(OBJ) $(OBJ_BONUS)
 
 clean:
-	$(RM) $(OBJ) $(OBJ_BONUS)
+	@$(RM) $(OBJ) $(OBJ_BONUS)
+	@echo "$(GREEN)LIBFT: cleaning finished$(RESET)"
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
+	@echo "$(GREEN)LIBFT: forced cleaning finished$(RESET)"
 
 re: fclean all
 
